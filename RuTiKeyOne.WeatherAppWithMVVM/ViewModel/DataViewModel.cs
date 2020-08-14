@@ -8,9 +8,9 @@ namespace RuTiKeyOne.WeatherAppWithMVVM.ViewModel
 {
     class DataViewModel : CloseWindow
     {
-        //Variables displaying weather and location data
+        //Properties displaying weather and location data
 
-        #region Variables
+        #region Properties
         public string City { get; set; } = JsonWeatherApi.Wr.Name;
 
         public string Temperature { get; set; } = $"{Math.Round(JsonWeatherApi.Wr.Main.Temp, 0)} °С ";
