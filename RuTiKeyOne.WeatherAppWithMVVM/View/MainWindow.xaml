@@ -1,0 +1,38 @@
+﻿<Window x:Class="RuTiKeyOne.WeatherAppWithMVVM.MainWindow"
+        x:Name="Main"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RuTiKeyOne.WeatherAppWithMVVM"
+        mc:Ignorable="d"
+        Title="MainWindow" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None" Height="600" Width="450" Background="#FF4C1F6F">
+    <Grid>
+        <Button Command="{Binding CloseMainCommand}" CommandParameter="{Binding ElementName=Main}"  Margin="15" x:Name="CloseButton" Width="100" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Content="Close"/>
+
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Image HorizontalAlignment="Center"  Height="200" Width="200" Source="Backgrounds/WeatherIcon.png"/>
+            <Border Background="White" CornerRadius="10" Margin="10" Height="225" Width="300">
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"></RowDefinition>
+                            <RowDefinition Height= "50  "></RowDefinition>
+                            <RowDefinition Height="40"></RowDefinition>
+                            <RowDefinition Height="auto"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition  Width="250"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <TextBox   Text="{Binding NameLocation, UpdateSourceTrigger=PropertyChanged}" Grid.Row="0" x:Name="TextBoxLocation" Foreground="#FF4C1F6F" FontWeight="DemiBold" FontSize="17.5">
+                        </TextBox>
+                        <Button Command="{Binding OpenChildWindow}" CommandParameter="{Binding NameLocation}" Grid.Row="1" x:Name="ButtonSearch" Content="Search"/>
+                        <Button Command="{Binding ClearCommand}" Grid.Row="2" x:Name="ButtonClear" Content="Clear">
+                        </Button>
+                        <Label Content="Choose your position" Grid.Row="3" x:Name="LabelDirections" FontWeight="Medium" Foreground="#FF4C1F6F" HorizontalContentAlignment="Center"/>
+                    </Grid>
+                </StackPanel>
+            </Border>
+        </StackPanel>
+    </Grid>
+</Window>
