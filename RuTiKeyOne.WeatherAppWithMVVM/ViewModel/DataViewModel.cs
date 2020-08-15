@@ -23,7 +23,7 @@ namespace RuTiKeyOne.WeatherAppWithMVVM.ViewModel
 
         #endregion
 
-        #region Simple constructor
+        #region Сonstructor
         public DataViewModel()
         {
             this.CloseDataCommand = new RelayCommand<Window>(this.CloseWindow);

@@ -100,37 +100,40 @@ namespace RuTiKeyOne.WeatherAppWithMVVM.ViewModel
         }
         public override void Execute(object parameter)
         {
-               if (parameter != null && parameter != string.Empty)
-               {
-                   switch (InternetConnection.CheckInternetConnection())
-                   {
-                       case true:
-                           if (JsonWeatherApi.CreateJsonRequest((string)parameter))
-                           {
-                               var DisplayRootRegistryTry = (Application.Current as App).displayRootRegistry;
-                               var DataTry = new DataViewModel();
-                               DisplayRootRegistryTry.ShowPresentation(DataTry);
-                           }
-                           else
-                           {
-                               var DisplayRootRegistryError = (Application.Current as App).displayRootRegistry;
-                               var Message404 = new MessageViewModel("Not Found");
-                               DisplayRootRegistryError.ShowPresentation(Message404);
-                           }
-                           break;
-                       case false:
-                           var DisplayRootRegistryFalse = (Application.Current as App).displayRootRegistry;
-                           var DataFalse = new MessageViewModel("Check your internet connection");
-                           DisplayRootRegistryFalse.ShowPresentation(DataFalse);
-                           break;
-                   }
-               }
-               else
-               {
-                   var DisplayRootRegistryFalse = (Application.Current as App).displayRootRegistry;
-                   var DataFalse = new MessageViewModel("Fill in the field");
-                   DisplayRootRegistryFalse.ShowPresentation(DataFalse);
-               }
+            Application.Current.Dispatcher.InvokeAsync(() =>
+            {
+                if (parameter != null && parameter != string.Empty)
+                {
+                    switch (InternetConnection.CheckInternetConnection())
+                    {
+                        case true:
+                            if (JsonWeatherApi.CreateJsonRequest((string)parameter))
+                            {
+                                var DisplayRootRegistryTry = (Application.Current as App).displayRootRegistry;
+                                var DataTry = new DataViewModel();
+                                DisplayRootRegistryTry.ShowPresentation(DataTry);
+                            }
+                            else
+                            {
+                                var DisplayRootRegistryError = (Application.Current as App).displayRootRegistry;
+                                var Message404 = new MessageViewModel("Not Found");
+                                DisplayRootRegistryError.ShowPresentation(Message404);
+                            }
+                            break;
+                        case false:
+                            var DisplayRootRegistryFalse = (Application.Current as App).displayRootRegistry;
+                            var DataFalse = new MessageViewModel("Check your internet connection");
+                            DisplayRootRegistryFalse.ShowPresentation(DataFalse);
+                            break;
+                    }
+                }
+                else
+                {
+                    var DisplayRootRegistryFalse = (Application.Current as App).displayRootRegistry;
+                    var DataFalse = new MessageViewModel("Fill in the field");
+                    DisplayRootRegistryFalse.ShowPresentation(DataFalse);
+                }
+            });
         }
     }
     #endregion
