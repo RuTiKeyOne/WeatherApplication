@@ -5,9 +5,8 @@ This application allows you to determine the weather in a locality.
 ## Screenshots
 
 <p align="center">
-  <img src="" width="180"/>
-  <img src="" width="180"/>
-  <img src="" width="180"/>
+  <img src="https://github.com/RuTiKeyOne/WeatherApplication/blob/master/doc/Screenshots/1.PNG" width="180"/>
+  <img src="https://github.com/RuTiKeyOne/WeatherApplication/blob/master/doc/Screenshots/2.PNG" width="180"/>
 </p>
  
 
