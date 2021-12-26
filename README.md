@@ -35,7 +35,3 @@ Before you begin, you should have already downloaded the Visual Studio and set i
 5. Let Visual Studio import the project.
 
 6. Clicking run button.
-
-## Wiki
-
-View the [wiki]() to see pages that provide details on the project.
