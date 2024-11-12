@@ -27,14 +27,9 @@ Before you begin, you should have already downloaded the Visual Studio and set i
 
 ## Building the Code
 
-1. Clone the repository using HTTP: git clone https://github.com/RuTiKeyOne/WeatherApplication
-
-2. Open Visual Studio.
-
-3. Click on 'Open an existing Visual Studio project'
-
-4. Browse to the directory where you cloned the repo and click OK.
-
-5. Let Visual Studio import the project.
-
-6. Clicking run button.
+* `Clone the repository using HTTP: git clone https://github.com/RuTiKeyOne/WeatherApplication`;
+* `Open Visual Studio`;
+* `Click on 'Open an existing Visual Studio project`;
+* `Browse to the directory where you cloned the repo and click OK`;
+* `Let Visual Studio import the project`;
+* `Clicking run button`.
