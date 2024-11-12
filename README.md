@@ -1,6 +1,18 @@
-# Weather App
+![GitHub](https://img.shields.io/github/license/IgorVolochay/Face-recognition?style=flat-square&color=blue) &nbsp;
+# Windows Weather App
 
+## Description
 This application allows you to determine the weather in a locality.
+
+## Technologies used
+* `Csharp`;
+* `WPF`.
+
+## Features
+* `Get data about temperature by location`;
+* `Get data about himidity by location`;
+* `Get data about pressure by location`;
+* `Get data about wind speed by location`.
 
 ## Screenshots
 
@@ -8,15 +20,6 @@ This application allows you to determine the weather in a locality.
   <img src="https://github.com/RuTiKeyOne/WeatherApplication/blob/master/doc/Screenshots/1.PNG" width="300"/>
   <img src="https://github.com/RuTiKeyOne/WeatherApplication/blob/master/doc/Screenshots/2.PNG" width="300"/>
 </p>
- 
-
-## What functionality does the application provide to the user?
-
-### The user can:
-* Get data about temperature by location
-* Get data about himidity by location
-* Get data about pressure by location
-* Get data about wind speed by location
 
 ## Development Setup
 
